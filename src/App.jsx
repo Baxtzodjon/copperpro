@@ -6,6 +6,7 @@ import souvenirImage from '/images/souvenir.png'
 import illustratorImage from '/images/illustrator.png'
 import Testimonial from './components/Testimonial';
 import Aspects from './components/Aspects';
+import Discount from './components/Discount';
 
 function App() {
 
@@ -311,7 +312,7 @@ function App() {
 
               <div className='dishes'>
 
-                {products_sec_blc.map(item => <Goods key={item.id} item={item} />)}
+                {products_sec_blc.map(item => <Discount key={item.id} item={item} />)}
 
               </div>
 

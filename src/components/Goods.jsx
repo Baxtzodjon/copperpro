@@ -1,6 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 
 function Goods({ item }) {
+    const [likedBtn, setLikedBtn] = useState(false);
+
+    const handleLikeBtn = () => {
+        setLikedBtn(!likedBtn);
+    };
+
     return (
         <div>
 
@@ -16,7 +22,11 @@ function Goods({ item }) {
 
                     <div className='likes'>
 
-                        <img src="/icons/heart.png" alt="" />
+                        <div className="like_blc" onClick={handleLikeBtn}>
+
+                            <img src={likedBtn ? '/icons/heart_like.png' : '/icons/heart.png'} alt="" />
+
+                        </div>
 
                     </div>
 

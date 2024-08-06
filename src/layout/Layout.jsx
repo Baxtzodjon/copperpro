@@ -6,6 +6,10 @@ import userIcon from "/icons/user.png"
 
 const Layout = ({ children }) => {
 
+    const top = () => {
+        window.scrollTo(0, 0);
+    };
+
     return (
         <>
 
@@ -195,7 +199,7 @@ const Layout = ({ children }) => {
 
                             </div>
 
-                            <div className="up_block">ВВЕРХ</div>
+                            <div onClick={top} className="up_block">ВВЕРХ</div>
 
                         </div>
 
